@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Random String Generator</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="isaacCSPRNG-1.1.js"></script>
+</head>
+
+<body>
+    <p>Generate a string of random 7-bit ASCII graphemes.</p>
+
+    <form action="javascript:navigator.clipboard.writeText(isaacCSPRNG(seed1.value + seed2.value).chars(l.value));">
+        <label for="seed1">Seed plain text (e.g. URL):</label><br>
+        <input type="text" id="seed1" name="seed1" value=""><br>
+        <label for="seed2">Seed hidden (e.g. passphrase):</label><br>
+        <input type="password" id="seed2" name="seed2" value=""><br>
+        <label for="l">String length:</label><br>
+        <input type="number" id="l" name="l" value="21"><br><br>
+        <input type="submit" value="Generate and copy to clipboard"><br><br>
+    </form>
+</body>
+
+</html>
